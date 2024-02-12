@@ -21,7 +21,7 @@ tl.from("img", {
   y: 150,
   opacity: 0,
   stagger: {
-    amount: 01,
+    amount: 1,
   },
 });
 tl.from(
@@ -77,3 +77,5 @@ welcomeScreen.from(
   },
   "-=.8"
 );
+
+

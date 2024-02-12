@@ -1,10 +1,53 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Neutral Face";
 }
+
+/* Light and dark mode toggle button */
+.toggle-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-btn::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-btn::after {
+  transform: translateX(25px);
+}
+
+/* Loading screen styles */
 .loading-screen {
   position: absolute;
   z-index: 10;
@@ -14,6 +57,7 @@ body {
   color: white;
   overflow: hidden;
 }
+
 .loading-section {
   position: absolute;
   display: flex;
@@ -35,10 +79,12 @@ body {
   margin: 0px 30px;
   font-family: "Kenoky";
 }
+
 #loader {
   font-size: 40px;
   font-family: "Kenoky";
 }
+
 .loading-images-container {
   position: absolute;
   bottom: 0;
@@ -48,6 +94,7 @@ body {
   width: 100%;
   height: min-content;
 }
+
 .loading-images {
   width: max-content;
   height: max-content;
@@ -55,7 +102,7 @@ body {
   animation: sliding 15s infinite linear;
 }
 
-/* animation sliding  */
+/* Animation for sliding images */
 @keyframes sliding {
   from {
     transform: translateX(5%);
@@ -71,6 +118,7 @@ body {
   overflow: hidden;
   object-fit: contain;
 }
+
 .bottom-section {
   display: flex;
   align-items: center;
@@ -79,24 +127,27 @@ body {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
 .bottom-section .bottom-line {
   font-weight: lighter;
   font-size: 12px;
 }
 
-/* welcome screen  */
-
+/* Welcome screen styles */
 .welcome-screen {
   padding: 50px;
   padding-top: 20px;
 }
+
 .welcome-screen h1 {
   font-family: "Neutral Face";
   font-size: 150px;
   right: 0;
   text-align: right;
 }
+
 span {
   display: block;
   overflow: hidden;
 }
+
